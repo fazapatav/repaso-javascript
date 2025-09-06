@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Calculadora Básica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <h1>Calculadora Básica</h1>
+            
+            <div class="pantalla">
+                <input type="text" id="display" readonly placeholder="0">
+            </div>
+            
+            <div class="botones">
+                <button class="btn btn-clear" onclick="limpiar()">C</button>
+                <button class="btn btn-clear" onclick="borrarUltimo()">←</button>
+                <button class="btn btn-operator" onclick="agregarOperador('/')">/</button>
+                <button class="btn btn-operator" onclick="agregarOperador('*')">×</button>
+                
+                <button class="btn btn-number" onclick="agregarNumero('7')">7</button>
+                <button class="btn btn-number" onclick="agregarNumero('8')">8</button>
+                <button class="btn btn-number" onclick="agregarNumero('9')">9</button>
+                <button class="btn btn-operator" onclick="agregarOperador('-')">-</button>
+                
+                <button class="btn btn-number" onclick="agregarNumero('4')">4</button>
+                <button class="btn btn-number" onclick="agregarNumero('5')">5</button>
+                <button class="btn btn-number" onclick="agregarNumero('6')">6</button>
+                <button class="btn btn-operator" onclick="agregarOperador('+')">+</button>
+                
+                <button class="btn btn-number" onclick="agregarNumero('1')">1</button>
+                <button class="btn btn-number" onclick="agregarNumero('2')">2</button>
+                <button class="btn btn-number" onclick="agregarNumero('3')">3</button>
+                <button class="btn btn-equals" onclick="calcular()" rowspan="2">=</button>
+                
+                <button class="btn btn-number btn-zero" onclick="agregarNumero('0')">0</button>
+                <button class="btn btn-number" onclick="agregarPunto()">.</button>
+            </div>
+            
+            <div class="historial">
+                <h3>Historial</h3>
+                <ul id="listaHistorial"></ul>
+                <button class="btn btn-clear" onclick="limpiarHistorial()">Limpiar Historial</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
